@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vijayaraj L - Full Stack Developer Portfolio">
+    <title>Vijayaraj L - Full Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Vijayaraj L">
+    <meta name="theme-color" content="#007bff">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Add this right after the loader div -->
+    <div class="welcome-popup" id="welcomePopup">
+        <div class="popup-content">
+            <h2>Welcome to My Portfolio!</h2>
+            <p>Thank you for visiting. I'm excited to share my work with you.</p>
+            <button class="close-popup">Get Started</button>
+        </div>
+    </div>
+
+    <!-- Add confirmation popup for resume download -->
+    <div class="welcome-popup" id="downloadConfirmPopup">
+        <div class="popup-content">
+            <h2>Download Resume</h2>
+            <p>Would you like to download my resume?</p>
+            <div class="popup-buttons">
+                <button class="confirm-download">Yes, Download</button>
+                <button class="cancel-download">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">VIJAYARAJ</div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">VIJAYARAJ L</span></h1>
+                <p class="title">Full Stack Developer</p>
+                <div class="hero-buttons">
+                    <a href="./Images/vj resume.pdf" class="download-btn" download="Vijayaraj_Resume.pdf">
+                        <i class="fas fa-download"></i> Download My Resume
+                    </a>
+                    <div class="social-links">
+                        <a href="https://github.com/Vijayaraj76" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="window.open(this.href)">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/professionalvijayraj/" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mr_stuvart_little_420?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Images/Vj.png" 
+                     alt="Vijayaraj L - Professional Portrait" 
+                     width="400" 
+                     height="400">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a passionate developer with expertise in building modern web applications. With a strong foundation in both frontend and backend technologies, I create efficient and scalable solutions.</p>
+            </div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <div class="skill-container">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">HTML5</span>
+                            <span class="skill-number">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">CSS3</span>
+                            <span class="skill-number">60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-number">30%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">React</span>
+                            <span class="skill-number">20%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-number">40%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Simple Quest</h3>
+                <p>The Simple Quest webpage is an interactive platform where users embark on a text-based adventure game. It offers a user-friendly experience, allowing players to make choices that influence the storyline. With its engaging narrative and easy navigation, it provides an enjoyable quest experience for all ages.</p>
+                <div class="project-links">
+                    <a href="https://github.com/Vijayaraj76/Simple-Quiz-Website" class="btn" target="_blank">GitHub</a>
+                </div>
+
+            </div>
+
+            <div class="project-card">
+                <h3>Simple Calculator</h3>
+                <p>The Simple Calculator Python project is a basic arithmetic tool that allows users to perform essential operations such as addition, subtraction, multiplication, and division. With a straightforward user interface, it demonstrates fundamental programming concepts like functions, loops, and user input handling. Ideal for beginners, this project provides a practical introduction to Python development.</p>
+                <div class="project-links">
+                    <a href="https://github.com/Vijayaraj76/Simple-Calculator" class="btn" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="Images/Project 1.png" alt="Project 1">
+                <h3>Personal Profile Builder</h3>
+                <p>The Personal Profile Builder is a Python-based application designed to create personalized profiles. By asking users to input their name, date of birth, education level, and life goal, the program generates a summary of the information with motivational messages tailored to the user's age and educational background. It also provides an option to save the profile in a text file for future reference. This program is a simple yet engaging way to practice Python input validation, date calculations, and file handling, while providing users with an inspiring personalized experience.</p>
+                <div class="project-links">
+                    <a href="https://github.com/Vijayaraj76/Personal-Profile-Builder" class="btn" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name" class="visually-hidden">Name</label>
+                    <input type="text" id="name" placeholder="Name" required 
+                           minlength="2" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="email" class="visually-hidden">Email</label>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="visually-hidden">Message</label>
+                    <textarea id="message" placeholder="Message" required 
+                              minlength="10" maxlength="500"></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="current-year">2024</span> Vijayaraj L. All rights reserved.</p>
+    </footer>
+
+    <button id="back-to-top" title="Back to Top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html> 

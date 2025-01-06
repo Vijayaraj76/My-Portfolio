@@ -1,0 +1,1116 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 0 2rem;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    animation: float 6s ease-in-out infinite;
+    border-radius: 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    background: linear-gradient(
+        to right,
+        #ff6b6b,  /* Red */
+        #4ecdc4,  /* Teal */
+        #45b7d1,  /* Blue */
+        #96c93d,  /* Green */
+        #e056fd,  /* Purple */
+        #ff6b6b   /* Back to red for smooth loop */
+    );
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientLight 12s linear infinite;
+    font-weight: bold;
+}
+
+@keyframes gradientLight {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+/* Sections */
+section {
+    padding: 5rem 2rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+/* About Section */
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-tags span {
+    background: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+    border-color: #007bff;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 400px;
+    padding: 1rem;
+}
+
+.project-card h3 {
+    padding: 1rem;
+}
+
+.project-card p {
+    padding: 0 1rem 1rem;
+}
+
+.project-links {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Contact Section */
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(45deg, #007bff, #00d2ff) border-box;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+input, textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Buttons */
+.btn {
+    background: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navigation */
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        text-align: center;
+        transition: 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 1rem 0;
+        z-index: 999;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        top: 60px;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding-top: 80px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-image img {
+        max-width: 280px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .social-links {
+        margin-top: 1rem;
+    }
+
+    /* About Section */
+    .about-content {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    /* Skills Section */
+    .skill-container {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    /* Projects Section */
+    .project-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .project-card {
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .project-card img {
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    /* Contact Section */
+    .contact-content {
+        padding: 0 1rem;
+    }
+
+    .contact-content form {
+        padding: 1.5rem;
+    }
+
+    /* Back to Top Button */
+    #back-to-top {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    /* Fix dark mode mobile menu */
+    .dark-mode .nav-menu {
+        background: rgba(45, 45, 45, 0.98);
+    }
+
+    /* Improve touch targets */
+    .nav-menu li a {
+        padding: 1rem;
+        display: block;
+    }
+
+    /* Fix project card overflow */
+    .project-card {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .project-card img {
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    /* Fix skill bars on mobile */
+    .skill-container {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    /* Improve form usability on mobile */
+    input, textarea {
+        font-size: 16px; /* Prevents iOS zoom */
+        padding: 12px;
+    }
+
+    /* Fix button touch targets */
+    .btn, 
+    .download-btn,
+    #back-to-top {
+        min-height: 44px;
+        padding: 10px 20px;
+    }
+}
+
+/* Dark mode mobile adjustments */
+.dark-mode .nav-menu {
+    background: rgba(45, 45, 45, 0.98);
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .download-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Dark Mode Styles */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .dark-mode-toggle {
+    color: #fff;
+}
+
+.dark-mode {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.dark-mode .navbar,
+.dark-mode .project-card,
+.dark-mode .contact-content,
+.dark-mode .hero,
+.dark-mode footer {
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.dark-mode .nav-menu li a,
+.dark-mode .nav-brand,
+.dark-mode .social-links a,
+.dark-mode .title {
+    color: #fff;
+}
+
+.dark-mode footer {
+    background: #1a1a1a;
+}
+
+.dark-mode .social-links a:hover {
+    color: #4da3ff;
+}
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #007bff;
+    z-index: 1001;
+    transition: width 0.1s ease;
+} 
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+    transition: background 0.3s ease;
+}
+
+#back-to-top:hover {
+    background: #0056b3;
+} 
+
+.skill-progress {
+    margin: 1rem 0;
+    width: 0;
+    transition: width 1.5s cubic-bezier(0.1, 0.5, 0.5, 1);
+}
+
+.skill-bar {
+    height: 10px;
+    background: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-progress-value {
+    height: 100%;
+    background: #007bff;
+    transition: width 1s ease;
+} 
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+} 
+
+/* Update Skills Section Styles */
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.skill-item {
+    width: 100%;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.skill-name {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.skill-number {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.skill-bar {
+    height: 10px;
+    background: #e9ecef;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #007bff, #00d2ff);
+    border-radius: 100px;
+}
+
+/* Dark mode support for skills */
+.dark-mode .skill-name {
+    color: #fff;
+}
+
+.dark-mode .skill-bar {
+    background: #444;
+}
+
+.dark-mode .skill-progress {
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+} 
+
+/* Add dark mode styles for contact form inputs */
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #fff;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+    color: #aaa;
+}
+
+.dark-mode input:focus,
+.dark-mode textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+} 
+
+/* Add styles for the download button */
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    z-index: 1;
+    position: relative;
+}
+
+.download-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.dark-mode .download-btn {
+    background: #00d2ff;
+}
+
+.dark-mode .download-btn:hover {
+    background: #00a6cc;
+} 
+
+/* Update dark mode styles for navigation */
+.dark-mode .navbar {
+    background: rgba(45, 45, 45, 0.95);
+}
+
+.dark-mode .navbar.scrolled {
+    background: rgba(45, 45, 45, 0.98);
+}
+
+.dark-mode .nav-brand,
+.dark-mode .nav-menu li a {
+    color: #fff;
+}
+
+.dark-mode .nav-menu li a:hover {
+    color: #00d2ff;
+}
+
+/* Update the existing navbar scroll effect in JavaScript */ 
+
+/* Add color-changing animation for the name */
+@keyframes colorChange {
+    0% { color: #007bff; }
+    33% { color: #00d2ff; }
+    66% { color: #3a7bd5; }
+    100% { color: #007bff; }
+}
+
+/* Dark mode version of the color animation */
+.dark-mode .highlight {
+    background: linear-gradient(
+        to right,
+        #00ffff,  /* Cyan */
+        #ff7eb3,  /* Pink */
+        #7affa7,  /* Mint */
+        #ffd700,  /* Gold */
+        #ff99ff,  /* Light Purple */
+        #00ffff   /* Back to cyan for smooth loop */
+    );
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientDark 12s linear infinite;
+}
+
+@keyframes gradientDark {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+} 
+
+/* Update dark mode highlight */
+.dark-mode .highlight,
+.highlight {
+    font-weight: bold;
+} 
+
+/* Add hover effects to project cards */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+    border-color: #007bff;
+}
+
+/* Skill bar animation on scroll */
+.skill-progress {
+    width: 0;
+    transition: width 1.5s cubic-bezier(0.1, 0.5, 0.5, 1);
+}
+
+/* Add a gradient border to the contact form */
+.contact-content form {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(45deg, #007bff, #00d2ff) border-box;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+/* Dark mode versions */
+.dark-mode .contact-content form {
+    background: linear-gradient(#2d2d2d, #2d2d2d) padding-box,
+                linear-gradient(45deg, #00ffff, #ff7eb3) border-box;
+}
+
+.dark-mode .project-card:hover {
+    border-color: #00d2ff;
+}
+
+/* Add a subtle particle background effect */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0,123,255,0.1) 0%, transparent 25%);
+    animation: pulse 8s ease infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.5); opacity: 0.2; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+
+/* Dark mode particle effect */
+.dark-mode .hero::before {
+    background: radial-gradient(circle at 50% 50%, rgba(0,210,255,0.1) 0%, transparent 25%);
+} 
+
+/* Add animation class for skill bars */
+.animate-skill {
+    transition: width 1.5s cubic-bezier(0.1, 0.5, 0.5, 1);
+}
+
+/* Ensure smooth animation for dark mode transition */
+.dark-mode .animate-skill {
+    transition: width 1.5s cubic-bezier(0.1, 0.5, 0.5, 1),
+                background 0.3s ease;
+} 
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .hamburger {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+} 
+
+/* Fix iOS scroll behavior */
+@supports (-webkit-touch-callout: none) {
+    html {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Improve accessibility */
+.btn:focus,
+.nav-menu li a:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.dark-mode .btn:focus,
+.dark-mode .nav-menu li a:focus,
+.dark-mode input:focus,
+.dark-mode textarea:focus {
+    outline-color: #00d2ff;
+} 
+
+/* Fix skill progress bar inconsistencies */
+.skill-progress {
+    height: 100%;
+    background: #007bff;
+    width: 0; /* Start at 0 for animation */
+    transition: width 1.5s cubic-bezier(0.1, 0.5, 0.5, 1);
+}
+
+/* Fix mobile menu styles */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        text-align: center;
+        transition: 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 1rem 0;
+        z-index: 999;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        top: 60px;
+    }
+
+    /* Fix dark mode mobile menu */
+    .dark-mode .nav-menu {
+        background: rgba(45, 45, 45, 0.98);
+    }
+}
+
+/* Fix hero section overflow */
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    height: auto;
+}
+
+/* Fix project card image aspect ratio */
+.project-card img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+/* Fix form field styles */
+.form-group {
+    position: relative;
+    width: 100%;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px; /* Prevents iOS zoom */
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+/* Fix dark mode transitions */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.dark-mode .navbar,
+.dark-mode .nav-menu,
+.dark-mode .project-card,
+.dark-mode input,
+.dark-mode textarea {
+    transition: all 0.3s ease;
+}
+
+/* Fix loader animation */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Fix back to top button positioning */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Fix skill bar animations */
+@media (prefers-reduced-motion: reduce) {
+    .skill-progress,
+    .animate-skill {
+        transition: none;
+    }
+} 
+
+/* Update hero buttons layout */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+} 
+
+/* Ensure social links are clickable */
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+    z-index: 1;
+    position: relative;
+}
+
+.social-links a:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+} 
+
+/* Add welcome popup styles */
+.welcome-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.welcome-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.welcome-popup.show .popup-content {
+    transform: translateY(0);
+}
+
+.popup-content h2 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.popup-content p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.close-popup {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.close-popup:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Dark mode styles for popup */
+.dark-mode .popup-content {
+    background: #2d2d2d;
+}
+
+.dark-mode .popup-content h2 {
+    color: #00d2ff;
+}
+
+.dark-mode .popup-content p {
+    color: #fff;
+} 
+
+/* Update social links dark mode styles */
+.dark-mode .social-links a {
+    background: #333;
+    color: #fff;
+}
+
+.dark-mode .social-links a:hover {
+    background: #00d2ff;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
+}
+
+/* Update existing social links hover state */
+.social-links a:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+} 
